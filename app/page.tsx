@@ -602,8 +602,7 @@ export default function Home() {
     <ServerMap />
 
 
-      {/* SERVER MAP SECTION */}
-      <ServerMap />
+    
 
       {/* BLOG SECTION */}
       <BlogSection />
