@@ -575,7 +575,7 @@ export default function Home() {
   onClick={() => {
     const message = `Hello! 1 I would like to order the FreeGo TV ${plan.name} plan for ${devicePlan} device(s) at ${plan.price} via freegoiptv.us.`;
 
-    const whatsappNumber = "+212723870095";
+    const whatsappNumber = "212723870095";
 
     window.open(
       `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
