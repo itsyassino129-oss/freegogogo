@@ -573,7 +573,7 @@ export default function Home() {
 <button
   type="button"
   onClick={() => {
-    const message = `Hello! 1 I would like to order the FreeGo TV ${plan.name} plan for ${devicePlan} device(s) at ${plan.price} via freegoiptv.us.`;
+    const message = `Hello, I'd like to order a ${plan.months}-month subscription for ${devicePlan} ${devicePlan === "1" ? "device" : "devices"} at ${plan.price}. Could you please confirm the next steps?\n\nRef. FG-WEB`;
 
     const whatsappNumber = "212723870095";
 
