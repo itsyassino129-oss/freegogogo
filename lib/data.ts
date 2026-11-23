@@ -473,9 +473,8 @@ export const blogArticles: Article[] = [
 
       </div>
     `
-  }
-];
-{
+  },
+  {
   id: '5',
   slug: 'buy-freego-tv-subscription-iptv-smarters-pro-setup-2026',
   title: 'How to Buy FreeGo TV Subscription & Set Up IPTV Smarters Pro in Minutes (2026 Guide)',
@@ -746,4 +745,5 @@ export const blogArticles: Article[] = [
 
       </div>
     `
-  },
+  }
+];
