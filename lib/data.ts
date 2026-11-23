@@ -753,7 +753,7 @@ export const blogArticles: Article[] = [
   slug: 'buy-freego-tv-subscription-tivimate-setup-2026',
   title: 'How to Buy FreeGo TV Subscription & Set Up TiviMate for Premium Streaming (2026 Guide)',
   excerpt: 'Combine FreeGo TV with TiviMate for a premium, cable-like 4K experience with a rich EPG guide. Buy your plan and get activated instantly via WhatsApp.',
-  coverImage: '/img/blog/article06/cover.jpg',
+  coverImage: 'img/blog/article06/cover.jpg',
   date: 'September 21, 2026',
   updatedDate: 'September 21, 2026',
   tag: 'SETUP GUIDE',
