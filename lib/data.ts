@@ -261,7 +261,7 @@ export const blogArticles: Article[] = [
     slug: 'buy-freego-tv-subscription-iptv-smarters-pro-setup-2026',
     title: 'How to Buy FreeGo TV Subscription & Set Up IPTV Smarters Pro in Minutes (2026 Guide)',
     excerpt: 'Learn how pairing FreeGo TV with IPTV Smarters Pro delivers a stable, high-bitrate 4K stream on any device. Buy your plan and get activated instantly via WhatsApp.',
-    coverImage: '/img/blog/article05/cover.jpg',
+    coverImage: '/img/blog/article05/cover.webp',
     date: 'September 14, 2026',
     updatedDate: 'September 14, 2026',
     tag: 'SETUP GUIDE',
@@ -288,7 +288,7 @@ export const blogArticles: Article[] = [
         </div>
         <div class="relative w-full rounded-2xl overflow-hidden aspect-[16/9] mb-8 border-2 border-[#EF2E55]/30 p-1">
           <div class="relative w-full h-full rounded-xl overflow-hidden">
-            <img src="/img/blog/article05/cover.jpg" alt="FreeGo TV subscription running on IPTV Smarters Pro" class="w-full h-full object-cover" />
+            <img src="/img/blog/article05/cover.webp" alt="FreeGo TV subscription running on IPTV Smarters Pro" class="w-full h-full object-cover" />
             <div class="absolute inset-0 via-transparent to-transparent opacity-60"></div>
           </div>
         </div>
