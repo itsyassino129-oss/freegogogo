@@ -1,17 +1,29 @@
-// app/setup/layout.tsx
+
 import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
+
+/* =========================
+   SITE CONFIGURATION
+========================= */
+const SITE_URL = 'https://freegoiptv.us';
+const BRAND = 'FreeGo IPTV';
+const SETUP_URL = `${SITE_URL}/setup`;
+const PRICING_URL = `${SITE_URL}/pricing`;
+const LOGO_URL = `${SITE_URL}/img/logo.webp`;
 
 /* =========================
    SEO METADATA
 ========================= */
 export const metadata: Metadata = {
-  title: 'SyntraTV Setup Guide — Install IPTV on Any Device | Firestick, Android, Smart TV, iOS, PC',
-  description:
-    'Complete step-by-step setup guide for SyntraTV. Learn how to install IPTV on Firestick, Android TV, Smart TV, iOS, Windows, and Mac. Easy installation with screenshots and video tutorials.',
+  title:
+    'FreeGo IPTV Setup Guide — Firestick, Android, Smart TV, iOS & PC',
 
-  authors: [{ name: 'SyntraTV Team' }],
-  creator: 'SyntraTV',
-  publisher: 'SyntraTV',
+  description:
+    'Learn how to set up FreeGo IPTV on Firestick, Android TV, Smart TV, iPhone, Windows, and Mac. Follow our step-by-step IPTV installation guide.',
+
+  authors: [{ name: 'FreeGo IPTV Team' }],
+  creator: BRAND,
+  publisher: BRAND,
 
   formatDetection: {
     email: false,
@@ -20,35 +32,33 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: 'https://syntratv.vip/setup',
+    canonical: SETUP_URL,
   },
 
   openGraph: {
-    title: 'SyntraTV Setup Guide — Install IPTV on Any Device',
+    title: 'FreeGo IPTV Setup Guide — Install IPTV on Any Device',
     description:
-      'Step-by-step tutorial to install SyntraTV on Firestick, Android TV, Smart TV, iOS, Windows, and Mac. Complete setup instructions with screenshots.',
-    url: 'https://syntratv.vip/setup',
-    siteName: 'SyntraTV',
+      'Step-by-step instructions to set up FreeGo IPTV on Firestick, Android TV, Smart TV, iOS, Windows, and Mac.',
+    url: SETUP_URL,
+    siteName: BRAND,
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://syntratv.vip/img/logo.webp',
+        url: LOGO_URL,
         width: 1200,
         height: 630,
-        alt: 'SyntraTV Setup Guide - Install IPTV on Any Device',
+        alt: 'FreeGo IPTV Setup Guide',
       },
     ],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'SyntraTV Setup Guide — Install IPTV on Any Device',
+    title: 'FreeGo IPTV Setup Guide — Install IPTV on Any Device',
     description:
-      'Complete step-by-step setup guide for Firestick, Android TV, Smart TV, iOS, Windows, and Mac.',
-    images: ['https://syntratv.vip/img/logo.webp'],
-    creator: '@SyntraTV',
-    site: '@SyntraTV',
+      'Follow our IPTV installation guide for Firestick, Android TV, Smart TV, iOS, Windows, and Mac.',
+    images: [LOGO_URL],
   },
 
   robots: {
@@ -69,113 +79,141 @@ export const metadata: Metadata = {
 /* =========================
    JSON-LD: HOW TO SCHEMA
 ========================= */
-const HowToSchema = () => (
-  <script
-    type="application/ld+json"
-    id="howto-jsonld" // Added unique ID
-    suppressHydrationWarning
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'HowTo',
-        name: 'How to Setup SyntraTV on Any Device',
-        description:
-          'Complete step-by-step guide to install and configure SyntraTV on Firestick, Android TV, Smart TV, iOS, Windows, and Mac devices.',
-        url: 'https://syntratv.vip/setup',
-        totalTime: 'PT10M',
-        estimatedCost: {
-          '@type': 'MonetaryAmount',
-          currency: 'EUR',
-          value: '0',
-        },
-        tool: [
-          { '@type': 'HowToTool', name: 'Firestick / Fire TV' },
-          { '@type': 'HowToTool', name: 'Android TV / Google TV' },
-          { '@type': 'HowToTool', name: 'Smart TV (Samsung, LG, Sony)' },
-          { '@type': 'HowToTool', name: 'iOS / iPhone / iPad' },
-          { '@type': 'HowToTool', name: 'Windows PC' },
-          { '@type': 'HowToTool', name: 'Mac Computer' },
-        ],
-        step: [
-          {
-            '@type': 'HowToStep',
-            name: 'Subscribe to SyntraTV',
-            position: 1,
-            text: 'Choose your subscription plan (3, 6, or 12 months) and complete secure payment. Receive instant credentials via email.',
-            url: 'https://syntratv.vip/pricing',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Check Your Email',
-            position: 2,
-            text: 'After payment confirmation, check your email for login credentials including Username, Password, and Server URL.',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Choose Your Device',
-            position: 3,
-            text: 'Select your device: Firestick, Android TV, Smart TV, iOS, Windows, or Mac.',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Install IPTV App',
-            position: 4,
-            text: 'Download and install recommended IPTV player for your device (IPTV Smarters Pro, TiviMate, or Smart IPTV).',
-            // Pro Tip: If you have screenshots later, you can expand steps with:
-            // "image": "https://syntratv.vip/img/setup/step4.jpg"
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Login and Start Streaming',
-            position: 5,
-            text: 'Enter your credentials and enjoy 20,000+ live channels and 65,000+ VODs in 4K/8K quality.',
-          },
-        ],
-        supply: [
-          {
-            '@type': 'HowToSupply',
-            name: 'Stable Internet Connection (25+ Mbps for 4K)',
-          },
-          {
-            '@type': 'HowToSupply',
-            name: 'SyntraTV Login Credentials',
-          },
-        ],
-      }),
-    }}
-  />
-);
+const HowToSchema = () => {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+
+    name: 'How to Set Up FreeGo IPTV on Any Device',
+
+    description:
+      'Step-by-step instructions to install and configure FreeGo IPTV on Firestick, Android TV, Smart TV, iOS, Windows, and Mac.',
+
+    url: SETUP_URL,
+
+    tool: [
+      {
+        '@type': 'HowToTool',
+        name: 'Firestick / Fire TV',
+      },
+      {
+        '@type': 'HowToTool',
+        name: 'Android TV / Google TV',
+      },
+      {
+        '@type': 'HowToTool',
+        name: 'Smart TV (Samsung, LG, Sony)',
+      },
+      {
+        '@type': 'HowToTool',
+        name: 'iOS / iPhone / iPad',
+      },
+      {
+        '@type': 'HowToTool',
+        name: 'Windows PC',
+      },
+      {
+        '@type': 'HowToTool',
+        name: 'Mac Computer',
+      },
+    ],
+
+    step: [
+      {
+        '@type': 'HowToStep',
+        name: 'Subscribe to FreeGo IPTV',
+        position: 1,
+        text:
+          'Choose a FreeGo IPTV subscription plan and complete your order to receive your account details.',
+        url: PRICING_URL,
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Check Your Account Details',
+        position: 2,
+        text:
+          'After your subscription is activated, locate your IPTV login credentials, including your username, password, and server URL.',
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Choose Your Device',
+        position: 3,
+        text:
+          'Select your device: Firestick, Android TV, Smart TV, iOS, Windows, or Mac.',
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Install an IPTV Player',
+        position: 4,
+        text:
+          'Download and install a compatible IPTV player for your device, such as IPTV Smarters Pro, TiviMate, or Smart IPTV.',
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Log In and Start Streaming',
+        position: 5,
+        text:
+          'Open your IPTV player, enter your subscription credentials, and access the content included in your plan.',
+      },
+    ],
+
+    supply: [
+      {
+        '@type': 'HowToSupply',
+        name: 'Stable Internet Connection',
+      },
+      {
+        '@type': 'HowToSupply',
+        name: 'FreeGo IPTV Login Credentials',
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      id="howto-jsonld"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(schema).replace(/</g, '\\u003c'),
+      }}
+    />
+  );
+};
 
 /* =========================
    JSON-LD: BREADCRUMB
 ========================= */
-const BreadcrumbSchema = () => (
-  <script
-    type="application/ld+json"
-    id="breadcrumb-jsonld" // Added unique ID
-    suppressHydrationWarning
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: 'https://syntratv.vip',
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Setup Guide',
-            item: 'https://syntratv.vip/setup',
-          },
-        ],
-      }),
-    }}
-  />
-);
+const BreadcrumbSchema = () => {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: SITE_URL,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Setup Guide',
+        item: SETUP_URL,
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      id="breadcrumb-jsonld"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(schema).replace(/</g, '\\u003c'),
+      }}
+    />
+  );
+};
 
 /* =========================
    MAIN LAYOUT
@@ -183,13 +221,12 @@ const BreadcrumbSchema = () => (
 export default function SetupLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <>
       <HowToSchema />
       <BreadcrumbSchema />
-      {/* FAQSchema removed here to clean up DOM execution footprint based on current Google algorithmic guidelines. Make sure to put those FAQs right into the visible text block layout of your main page component! */}
       {children}
     </>
   );
